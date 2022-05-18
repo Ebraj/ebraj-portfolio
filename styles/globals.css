@@ -7,7 +7,21 @@
 @layer base {
   body {
     font-family: "Work Sans", sans-serif;
-    @apply bg-white;
     @apply text-lg;
+    @apply text-xl;
+    @apply bg-gray-50;
+  }
+}
+
+@layer components {
+  .top-gradient {
+    background: rgb(227, 150, 0);
+    background: linear-gradient(
+      97deg,
+      rgba(227, 150, 0, 1) 0%,
+      rgba(234, 76, 137, 1) 25%,
+      rgba(143, 72, 235, 1) 64%,
+      rgba(29, 161, 242, 1) 100%
+    );
   }
 }

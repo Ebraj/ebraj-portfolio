@@ -8,8 +8,11 @@ function Layout({ children }) {
   return (
     <>
       <Head>
-        <title>Project title</title>
-        <meta name="description" content="Project Description" />
+        <title>Ebraj | Portfolio</title>
+        <meta
+          name="description"
+          content="Ebraj | Portfolio using NextJS and Tailwind CSS."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
