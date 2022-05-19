@@ -1,4 +1,28 @@
 export const datas = {
+  socialLinks: [
+    {
+      iconTitle: "AiFillGithub",
+      title: "GitHub",
+    },
+  ],
+  navLinks: [
+    {
+      index: "01",
+      linkTitle: "Projects",
+    },
+    {
+      index: "02",
+      linkTitle: "Tools",
+    },
+    {
+      index: "03",
+      linkTitle: "Services",
+    },
+    {
+      index: "04",
+      linkTitle: "Say Hello!",
+    },
+  ],
   projectUIsDatas: [
     {
       imgSrc: "/images/project-uis/airbnb-clone.png",

@@ -17,9 +17,7 @@ function Layout({ children }) {
       </Head>
 
       <div className="flex flex-col w-full justify-between min-h-screen">
-        <Navbar />
         <main className="w-full flex-1">{children}</main>
-        <Footer />
       </div>
     </>
   );
