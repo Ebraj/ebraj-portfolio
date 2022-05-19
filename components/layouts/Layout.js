@@ -16,7 +16,7 @@ function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col w-full justify-between min-h-screen">
+      <div className="flex flex-col w-full justify-between h-screen">
         <main className="w-full flex-1">{children}</main>
       </div>
     </>

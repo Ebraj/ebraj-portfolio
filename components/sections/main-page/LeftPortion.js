@@ -9,7 +9,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 
 function LeftPortion({ datas }) {
   return (
-    <div className="flex justify-between flex-col py-20 space-y-12">
+    <div className="flex justify-between flex-col py-20 space-y-12 sticky top-0 md:min-h-screen">
       {/* Title & description */}
       <div className="space-y-8 sm:space-y-10 md:space-y-12">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-black">
@@ -49,6 +49,7 @@ function LeftPortion({ datas }) {
         <div className="w-14 rounded-full p-1 bg-green-500">
           <Image
             src="/images/ebraj/ebraj.jpeg"
+            alt="Ebraj Gurung."
             className="rounded-full"
             layout="responsive"
             width={1419}

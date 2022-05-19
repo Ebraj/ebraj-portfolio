@@ -2,8 +2,8 @@ import Layout from "../components/layouts/Layout";
 import MaxWLayout from "../components/layouts/MaxWLayout";
 
 // Components
-import TopGradient from "../components/sections/TopGradient";
-import Header from "../components/sections/Header";
+import TopGradient from "../components/utils/TopGradient";
+import Header from "../components/sections/main-page/Header";
 
 //Datas
 import { datas } from "../components/datas";
