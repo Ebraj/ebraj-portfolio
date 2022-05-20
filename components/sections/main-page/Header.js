@@ -5,7 +5,7 @@ import RightPortion from "./RightPortion";
 function Header({ datas }) {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-32 relative">
+      <div className="grid grid-cols-1 md:grid-cols-[45%_45%] md:gap-[10%] relative">
         {/* Left Portion */}
         <div>
           <LeftPortion datas={datas} />

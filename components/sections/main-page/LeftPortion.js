@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Link as LinkFromNPM } from "react-scroll";
 import Link from "next/link";
 import React from "react";
 
@@ -24,19 +25,27 @@ function LeftPortion({ datas }) {
           reputed Engineering Campus,WRC.
         </p>
         {/* Links */}
-        <ul className="space-y-3 text-gray-400">
+        <ul className="space-y-6 text-gray-400">
           {datas.navLinks.map((singleLink) => {
             return (
-              <li key={singleLink.index}>
-                <Link href="/" passHref>
-                  <a>
-                    <span className="flex items-center space-x-3 custom-line-container text-sm">
-                      <span>{singleLink.index}.</span>
-                      <span className="w-12 bg-gray-400 inline-block h-[1px] custom-line"></span>
-                      <span className="uppercase">{singleLink.linkTitle}</span>
+              <li
+                key={singleLink.index}
+                className="cursor-pointer w-[min-content]"
+              >
+                <LinkFromNPM
+                  to={singleLink.linkTo}
+                  activeClass="custom-active-class"
+                  smooth={true}
+                  spy={true}
+                >
+                  <span className="flex items-center space-x-3 custom-line-container text-sm">
+                    <span>{`0${singleLink.index}`}</span>
+                    <span className="w-6 bg-gray-500 inline-block h-[1px] custom-line"></span>
+                    <span className="uppercase font-bold">
+                      {singleLink.linkTitle}
                     </span>
-                  </a>
-                </Link>
+                  </span>
+                </LinkFromNPM>
               </li>
             );
           })}
@@ -44,7 +53,7 @@ function LeftPortion({ datas }) {
       </div>
 
       {/* Author Section */}
-      <div className="flex justify-start space-x-5 items-center">
+      <div className="flex justify-between sm:justify-start space-x-5 items-center">
         {/* Left Portion */}
         <div className="w-14 rounded-full p-1 bg-green-500">
           <Image
@@ -59,24 +68,51 @@ function LeftPortion({ datas }) {
 
         {/* Right Portion */}
         <div>
-          <ul className="flex justify-center items-center space-x-3">
-            <li className="flex space-x-1 items-center justify-center">
-              <span className="text-green-500 text-xl">
-                <AiFillGithub />
-              </span>
-              <span>GitHub</span>
+          <ul className="flex justify-center items-center space-x-3 text-gray-400">
+            <li className="custom-social-link">
+              <Link href="https://github.com/ebraj" passHref>
+                <a
+                  target="_blank"
+                  className="flex space-x-1 items-center justify-center"
+                >
+                  <span className="custom-social-icon text-green-500 text-xl">
+                    <AiFillGithub />
+                  </span>
+                  <span className="hidden sm:inline-block custom-social-text">
+                    GitHub
+                  </span>
+                </a>
+              </Link>
             </li>
-            <li className="flex space-x-1 items-center justify-center">
-              <span className="text-green-500 text-xl">
-                <AiOutlineTwitter />
-              </span>
-              <span>Twitter</span>
+            <li className="custom-social-link">
+              <Link href="https://twitter.com/ebraj_g" passHref>
+                <a
+                  target="_blank"
+                  className="flex space-x-1 items-center justify-center"
+                >
+                  <span className="custom-social-icon text-green-500 text-xl">
+                    <AiOutlineTwitter />
+                  </span>
+                  <span className="hidden sm:inline-block custom-social-text">
+                    Twitter
+                  </span>
+                </a>
+              </Link>
             </li>
-            <li className="flex space-x-1 items-center justify-center">
-              <span className="text-green-500 text-xl">
-                <AiFillLinkedin />
-              </span>
-              <span>LinkedIn</span>
+            <li className="custom-social-link">
+              <Link href="https://www.linkedin.com/in/ebrajgrg/" passHref>
+                <a
+                  target="_blank"
+                  className="flex space-x-1 items-center justify-center"
+                >
+                  <span className="custom-social-icon text-green-500 text-xl">
+                    <AiFillLinkedin />
+                  </span>
+                  <span className="hidden sm:inline-block custom-social-text">
+                    LinkedIn
+                  </span>
+                </a>
+              </Link>
             </li>
           </ul>
         </div>

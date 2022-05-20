@@ -37,9 +37,29 @@
 }
 
 /* Custom CSS */
+
+/* ----- NAV LINKS ----  */
 .custom-line-container .custom-line {
-  @apply transition-all duration-300 w-14;
+  @apply transition-all duration-200;
 }
 .custom-line-container:hover .custom-line {
-  @apply transition-all duration-300 w-20;
+  @apply w-14;
+}
+.custom-active-class {
+  @apply w-14 text-gray-100;
+}
+.custom-active-class .custom-line {
+  @apply bg-gray-100 w-14;
+}
+
+/* ----- SOCIAL LINKS ----  */
+.custom-social-link .custom-social-icon,
+.custom-social-link .custom-social-text {
+  @apply transition-all duration-200;
+}
+.custom-social-link:hover .custom-social-icon {
+  @apply text-green-300;
+}
+.custom-social-link:hover .custom-social-text {
+  @apply text-gray-100;
 }
