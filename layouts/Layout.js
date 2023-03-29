@@ -1,9 +1,6 @@
 import Head from "next/head";
 import React from "react";
 
-import Footer from "../utils/Footer";
-import Navbar from "../utils/Navbar";
-
 function Layout({ children }) {
   return (
     <>
@@ -16,8 +13,8 @@ function Layout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col w-full justify-between h-screen">
-        <main className="w-full flex-1">{children}</main>
+      <div className="flex flex-col justify-between w-full h-screen">
+        <main className="flex-1 w-full">{children}</main>
       </div>
     </>
   );

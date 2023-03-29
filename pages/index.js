@@ -1,12 +1,11 @@
-import Layout from "../components/layouts/Layout";
-import MaxWLayout from "../components/layouts/MaxWLayout";
+import Layout from "../layouts/Layout";
+import MaxWLayout from "../layouts/MaxWLayout";
 
 // Components
-import TopGradient from "../components/utils/TopGradient";
-import Header from "../components/sections/main-page/Header";
+import TopGradient from "../components/common/TopGradient";
+import Header from "../components/homepage/Header";
 
 //Datas
-import { datas } from "../components/datas";
 
 export default function Home() {
   return (
@@ -18,7 +17,7 @@ export default function Home() {
         <MaxWLayout>
           {/* Header */}
           <div>
-            <Header datas={datas} />
+            <Header />
           </div>
         </MaxWLayout>
       </Layout>

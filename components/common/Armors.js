@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
+import { armorsList } from "../../datas/armorsList";
 
 import { FcApproval } from "react-icons/fc";
 
-function Armors({ datas }) {
+function Armors() {
   return (
-    <div className="pt-20 md:py-20 space-y-2" id="armors">
-      <h2 className="pb-2 font-black text-green-500 flex items-center space-x-2">
+    <div className="pt-20 space-y-2 md:py-20" id="armors">
+      <h2 className="flex items-center pb-2 space-x-2 font-black text-green-500">
         <span className="text-3xl">
           <FcApproval />
         </span>{" "}
@@ -14,8 +15,8 @@ function Armors({ datas }) {
       </h2>
 
       {/* All Skills Show */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-        {datas.armorsList.map((singleData) => {
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        {armorsList.map((singleData) => {
           return (
             <div
               key={singleData.index}
@@ -25,18 +26,18 @@ function Armors({ datas }) {
                   : "bg-[#151515] border border-gray-800 rounded-sm grid space-y-4"
               }
             >
-              <div className="h-36 grid place-content-center">
+              <div className="grid h-36 place-content-center">
                 <div className="w-[75px] mx-auto">
                   <Image
                     src={singleData.imgSrc}
                     alt={singleData.title}
                     layout="responsive"
-                    width={2000}
-                    height={2000}
+                    width={singleData.width}
+                    height={singleData.height}
                   />
                 </div>
               </div>
-              <div className="bg-black px-8 py-8 grid rounded-md space-y-3">
+              <div className="grid px-8 py-8 space-y-3 bg-black rounded-md">
                 <h2 className="text-gray-300">{singleData.title}</h2>
                 <p className="text-gray-500">{singleData.content}</p>
               </div>
